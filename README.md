@@ -1,6 +1,64 @@
-# GIVE-nourishAI-hackathon
+# GIVE-NourishAI-Hackathon
 
-Here’s a detailed checklist for your nonprofit hackathon focused on building a chatbot (ChatGPT + WhatsApp integration). I’ve organized it into **Pre-Hackathon Preparations** and **Day-of Hackathon Execution**, broken down into categories you’ll need to think about.  
+
+## On October 25th, 2025 the Day of Hackathon:
+
+
+***
+
+## Hackathon Day Schedule (10 AM – 6 PM)
+
+### 10:00 – 10:30 AM  
+- Registration & Check-In  
+- Volunteers at desk, participants receive badges/swag  
+- Coffee & light snack
+
+### 10:30 – 11:00 AM  
+- Kickoff & Welcome  
+- Intro to schedule, rules, deliverables  
+- Quick orientation on APIs (ChatGPT + WhatsApp demo)  
+- Introduce captains, volunteers, and judges  
+
+### 11:00 – 1:00 PM  
+- Hacking Session #1: If there is enough participants, Split two teams competing with each other
+- Teams brainstorm, form groups (if not pre-formed)  
+- Mentors circulate to assist  
+- Pacers check on setup of ChatGPT and WhatsApp APIs  
+
+### 1:00 – 2:00 PM  
+- Lunch & Networking  
+- Relax and mingle with other participants and mentors  
+
+### 2:00 – 4:30 PM  
+- Hacking Session #2  
+- Focused development sprint  
+- Pacers check teams’ progress and encourage testing  
+- Organizers keep reminding about deliverables submission process  
+
+### 4:30 – 5:00 PM  
+- Break
+
+### 5:00 – 6:00 PM  
+- Submission Deadline Reminder & Final Touches  
+- Timekeeper announces countdown (15 min left, 5 min left, final submission call)  
+- Collect all project links (Google Form/Devpost/etc.)  
+
+### 6:00 – 6:30 PM  
+- Project Demos & Judging  
+- Each team presents demo (5 mins each, adjust if many teams)  
+- Judges score based on criteria: Innovation, Impact, Functionality, Presentation    
+- Winners Announced & Group Thank You  
+- Prizes awarded, photos taken, closing remarks  
+
+***
+
+## Celebration
+
+### 6:30 PM – onwards  
+- **Happy Hour at local bar**  
+- Casual networking, celebration of winners, and socializing after event  
+
+***
 
 ***
 
@@ -51,61 +109,3 @@ Here’s a detailed checklist for your nonprofit hackathon focused on building a
 
 ***
 
-## On the Day of Hackathon
-
-Here’s a time-blocked **Hackathon Day Schedule** running from 10:00 AM to 5:00 PM, followed by a celebratory happy hour.  
-
-***
-
-## Hackathon Day Schedule (10 AM – 5 PM)
-
-### 10:00 – 10:30 AM  
-- Registration & Check-In  
-- Volunteers at desk, participants receive badges/swag  
-- Coffee & light breakfast available  
-
-### 10:30 – 11:00 AM  
-- Kickoff & Welcome  
-- Intro to schedule, rules, deliverables  
-- Quick orientation on APIs (ChatGPT + WhatsApp demo)  
-- Introduce mentors, volunteers, and judges  
-
-### 11:00 – 1:00 PM  
-- Hacking Session #1  Split two teams competing with each other
-- Teams brainstorm, form groups (if not pre-formed)  
-- Mentors circulate to assist  
-- Pacers check on setup of ChatGPT and WhatsApp APIs  
-
-### 1:00 – 1:45 PM  
-- Lunch & Networking  
-- Relax and mingle with other participants and mentors  
-
-### 1:45 – 3:45 PM  
-- Hacking Session #2  
-- Focused development sprint  
-- Pacers check teams’ progress and encourage testing  
-- Organizers keep reminding about deliverables submission process  
-
-### 3:45 – 4:00 PM  
-- Submission Deadline Reminder & Final Touches  
-- Timekeeper announces countdown (15 min left, 5 min left, final submission call)  
-- Collect all project links (Google Form/Devpost/etc.)  
-
-### 4:00 – 5:00 PM  
-- Project Demos & Judging  
-- Each team presents demo (5 mins each, adjust if many teams)  
-- Judges score based on criteria: Innovation, Impact, Functionality, Presentation  
-
-### 5:00 PM  
-- Winners Announced & Group Thank You  
-- Prizes awarded, photos taken, closing remarks  
-
-***
-
-## Celebration
-
-### 5:30 PM – onwards  
-- **Happy Hour at local bar**  
-- Casual networking, celebration of winners, and socializing after event  
-
-***
