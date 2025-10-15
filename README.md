@@ -1,8 +1,11 @@
 # GIVE-NourishAI-Hackathon
 
-## Prerquisites: we are using N8N platform for hackathon collaboration
+## Prerequisites: TODOs before the hackathon
 - Familiarize with N8N Agentic AI workflows: https://www.youtube.com/watch?v=NOfTpQRklXU
 - Register for a free starter trial of online N8N account here: https://n8n.io/pricing/
+- Complete volunteer [registration](http://www.nyc-dssg.org) on DSSG-NYC website
+- Join DSSG-NYC [Slack Group](https://join.slack.com/t/nyc-dssg/shared_invite/zt-3d2ebdtz5-U_ockU5652ppbSIuCERdGA)
+- Review DSSG [Anti-harassment Policy](https://github.com/dssg/hitchhikers-guide/blob/master/sources/dssg-manual/conduct-culture-and-communications/README.md), and [ethical standards](https://dssgfellowship.org/2015/09/18/an-ethical-checklist-for-data-science/)
 
   
 ## On October 25th, 2025 the Day of Hackathon:
