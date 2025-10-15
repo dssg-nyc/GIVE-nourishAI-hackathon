@@ -1,6 +1,10 @@
 # GIVE-NourishAI-Hackathon
 
+## Prerquisites: we are using N8N platform for hackathon collaboration
+- Familiarize with N8N Agentic AI workflows: https://www.youtube.com/watch?v=NOfTpQRklXU
+- Register for a free starter trial of online N8N account here: https://n8n.io/pricing/
 
+  
 ## On October 25th, 2025 the Day of Hackathon:
 
 
