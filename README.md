@@ -4,12 +4,21 @@
 - Familiarize with N8N Agentic AI workflows: https://www.youtube.com/watch?v=NOfTpQRklXU
 - Register for a free starter trial of online N8N account here: https://n8n.io/pricing/
 - Complete volunteer [registration](http://www.nyc-dssg.org) on DSSG-NYC website
-- Join DSSG-NYC [Slack Group](https://join.slack.com/t/nyc-dssg/shared_invite/zt-3d2ebdtz5-U_ockU5652ppbSIuCERdGA)
+- Join DSSG-NYC [Slack Group](https://join.slack.com/t/nyc-dssg/shared_invite/zt-3fhzyi936-hDjiJn05j9EKY3BH9YjXgQ)
 - Review DSSG [Anti-harassment Policy](https://github.com/dssg/hitchhikers-guide/blob/master/sources/dssg-manual/conduct-culture-and-communications/README.md), and [ethical standards](https://dssgfellowship.org/2015/09/18/an-ethical-checklist-for-data-science/)
+
+## Hacking Deliverables:
+1) NourishAI Chat Bot for health and food equity, it should have these features:
+  > Input: communicate with user via whatsapp, collect information about the user's dietary restictions status, health status, cultural status, language of communication, demographics etc.
+
+  > Output: Optimized meal plan, availability hours each week for meal delivery, nutrition guidance.
+
+2) AI or intelligent workflow that takes in the outputs of NourishAI chatbot and orchestrate workflows for food preparation, cooking, and delivery operations
+> Ouputs: meals and recipes for cooks to prepare
+> Timely delivery information for couriers that matches the user's availability 
 
   
 ## On October 25th, 2025 the Day of Hackathon:
-
 
 ***
 
