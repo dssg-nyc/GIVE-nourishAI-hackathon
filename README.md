@@ -8,9 +8,8 @@
 - Review DSSG [Anti-harassment Policy](https://github.com/dssg/hitchhikers-guide/blob/master/sources/dssg-manual/conduct-culture-and-communications/README.md), and [ethical standards](https://dssgfellowship.org/2015/09/18/an-ethical-checklist-for-data-science/)
 
 ## Hacking Deliverables:
-1) NourishAI Chat Bot for health and food equity, it should have these features:
-  > Input: communicate with user via whatsapp, collect information about the user's dietary restictions status, health status, cultural status, language of communication, demographics etc.
-
+1) NourishAI Chat Bot for weekly communication, feedback on health and food recommendation, it should have these features:
+  > Input: family user's dietary restictions status, health status, cultural status, language of communication, demographics etc.
   > Output: Optimized meal plan, availability hours each week for meal delivery, nutrition guidance.
 
 2) AI or intelligent workflow that takes in the outputs of NourishAI chatbot and orchestrate workflows for food preparation, cooking, and delivery operations
