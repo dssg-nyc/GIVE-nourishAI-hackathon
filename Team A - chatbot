@@ -1,0 +1,196 @@
+{
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {
+          "messageStatusUpdates": []
+        }
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        -784,
+        16
+      ],
+      "id": "389209eb-4c4b-4c64-a376-bc06907414aa",
+      "name": "WhatsApp Trigger",
+      "webhookId": "d82bec29-e02e-4cc3-9da7-1f3d140727c1",
+      "credentials": {
+        "whatsAppTriggerApi": {
+          "id": "ETj2iIkl4KvyrWF5",
+          "name": "Official OAuth Account - A"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.contacts[0].wa_id }}",
+        "contextWindowLength": 20
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -448,
+        256
+      ],
+      "id": "6a6bc7b9-4a5e-4a40-8cdb-f0a42a2c362d",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "828189470379161",
+        "recipientPhoneNumber": "={{ $('WhatsApp Trigger').item.json.contacts[0].wa_id }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        -64,
+        16
+      ],
+      "id": "cff7dcc1-ff6c-404e-8234-e7736f2eb502",
+      "name": "Send message",
+      "webhookId": "9ecc5a13-9009-4a72-ae49-0b79761bc84b",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "Hhv35YJw516rLdJF",
+          "name": "WhatsApp - Team A"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "url",
+          "value": "https://docs.google.com/spreadsheets/d/1bY19czv9xo45nLZ4Bo-rmg_vfg-kaOQhwClvm2DlEBM/edit?usp=drivesdk",
+          "__regex": "https:\\/\\/(?:drive|docs)\\.google\\.com(?:\\/.*|)\\/d\\/([0-9a-zA-Z\\-_]+)(?:\\/.*|)"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "dataset",
+          "mode": "name"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.7,
+      "position": [
+        -272,
+        224
+      ],
+      "id": "a38bd2f2-ea05-42ef-99ff-6323a4718145",
+      "name": "Get row(s) in sheet in Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "vu1v00DdFYomocol",
+          "name": "dataset"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=The user's latest text message is {{ $json.messages[0].text.body }}.\n\nThe user's phone number is {{ $json.contacts[0].wa_id }}.\n\nYou have 4 functions,\n1. Data retrieval. If the user asks a question about a piece of data in our dataset, then lookup the data associated with their phone number. Keep the response short and do not provide information you are not asked for.\n2. Creating a meal plan. The meal plan requirements are below. \n3. Scheduling, if a meal plan has already been created in the chat history, then your job is to find a good delivery or pickup window for the user. If the user does not request a specific window, then respond with a 2 hour window during the hours of 7am and 9pm and a random day of the week. If they want to adjust the delivery time, then offer them a new one. If they suggest a time that is during our delivery hours then always say yes. By default, use the delivery/pickup preference from the dataset. Whenever you mention a time window, be sure to specify if it is delivery or pickup.\n4. Offer health advice based on the user's profile if asked. Use the data inside the spreadsheet if needed.\n\nMeal Plan Requirements:\n- Culturally relevant meals\n- Medically tailored (consider BMI, age, diagnosis, and fruit/veg intake), considering the data inside the attached table.\n- 3 meals/day for 7 days\n- Attempt to overlap some items between days such that the total number of different items is minimal. Ultimately we will feed the outputs into a shopping list for the user.\n- If a User sends a follow up message, then modify the meal plan according to their request. \n- At the end of your meal plan, prompt the user about whether or not to schedule a delivery/pickup.\n\nAdditional requirements:\n- Please write your responses in the language that's specified in the language column of the data.\n- If the user asks you a question outside of your scope, please respond that you are only able to help with health advice and scheduling pickups / deliveries.\n- Once the user is done asking questions, then confirm the meal plan and delivery time with them\n",
+        "options": {
+          "returnIntermediateSteps": false
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -496,
+        16
+      ],
+      "id": "c9e30a0f-e895-43f2-b51e-eb72b99ec839",
+      "name": "Meal Plan Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatDeepSeek",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        208
+      ],
+      "id": "36cd8b93-000a-4dd2-a712-55089a7c279a",
+      "name": "DeepSeek Chat Model",
+      "credentials": {
+        "deepSeekApi": {
+          "id": "0ef0mLkI9piBGSfM",
+          "name": "DeepSeek account 2"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "Meal Plan Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "Meal Plan Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet in Google Sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "Meal Plan Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meal Plan Agent": {
+      "main": [
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepSeek Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Meal Plan Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5ab5075b3f6c5d1b1f89c5fcfeb0371c8dc0b8163cfeba31aff0663915e862fd"
+  }
+}
